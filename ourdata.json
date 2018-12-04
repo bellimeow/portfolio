@@ -1,0 +1,156 @@
+[
+  {
+    "start_date": "2017-08-28",
+    "short_description": "Making a webbased portfolio",
+    "course_name": "",
+    "long_description": "In a group of three persons, we made a portfolio with web based data. We created a data storage layer consisting of a JSON-file, and then wrote an API as a python module to extract data. We further made a presentation layer that communicated with the API to obtain the data to display on the page.",
+    "group_size": 3,
+    "academic_credits": "6",
+    "lulz_had": "many",
+    "external_link": "www.ourportfolio.com",
+    "small_image": "small.png",
+    "techniques_used": [
+	"python",
+	"Flask",
+	"Jinja2",
+	"HTML",
+	"CSS",
+	"JavaScript",
+	"jQuery",
+	"Bootstrap",
+	"git"
+    ],
+    "project_name": "Portfolio",
+    "course_id": "TDP003",
+    "end_date": "2017-10-17",
+    "project_id": 1,
+    "big_image": "big.png"
+  },
+  {
+    "start_date": "2009-09-07",
+    "short_description": "A webpage for awesome cats",
+    "course_name": "OK\u00c4NT",
+    "long_description": "Eat the fat cats food shake treat bag sniff sniff you call this cat food or dead stare with ears cocked. Slap owner's face at 5am until human fills food dish. Lie in the sink all day shake treat bag, inspect anything brought into the house slap kitten brother with paw. Meow scratch leg; meow for can opener to feed me. Kitty power. This human feeds me, i should be a god eat and than sleep on your face so jump off balcony, onto stranger's head destroy the blinds. Shove bum in owner's face like camera lens. Howl uncontrollably for no reason cat is love, cat is life ignore the squirrels, you'll never catch them anyway but chew on cable yet ask for petting. Hunt anything that moves. Howl uncontrollably for no reason steal the warm chair right after you get up, cat mojo , use lap as chair sit by the fire find empty spot in cupboard and sleep all day. Mew favor packaging over toy curl into a furry donut or under the bed claws in your leg or paw at beetle and eat it before it gets away. Asdflkjaertvlkjasntvkjn (sits on keyboard) loves cheeseburgers so jump five feet high and sideways when a shadow moves. The dog smells bad loves cheeseburgers adventure always. Hunt anything that moves intently sniff hand you call this cat food but with tail in the air and groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked cat not kitten around . Dream about hunting birds. Hunt anything that moves kitty power run in circles. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff slap kitten brother with paw and kitty power so stare at wall turn and meow stare at wall some more meow again continue staring or sit by the fire annoy kitten brother with poking get video posted to internet for chasing red dot. Kitten is playing with dead mouse. Jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Flop over stares at human while pushing stuff off a table. Friends are not food. Sleep nap human give me attention meow eat from dog's food for find empty spot in cupboard and sleep all day. ",
+    "group_size": 4,
+    "academic_credits": "5",
+    "lulz_had": "few",
+    "external_link": "YY",
+    "small_image": "small.png",
+    "techniques_used": [
+	"c++",
+	"csv",
+	"python",
+	"HTML",
+	"CSS",
+	"Bootstrap"
+	
+    ],
+    "project_name": "Cats united",
+    "course_id": "CAT101",
+    "end_date": "2009-09-08",
+    "project_id": 3,
+    "big_image": "big.png"
+  },
+  {
+    "start_date": "2009-09-08",
+    "short_description": "Database of the most bearded guys in the world",
+    "course_name": "",
+    "long_description": "Gochujang actually humblebrag marfa. Tofu man bun vinyl fam, asymmetrical vaporware fashion axe. Tote bag vinyl church-key, direct trade brunch asymmetrical etsy hammock ugh sartorial bitters you probably haven't heard of them wolf flexitarian four dollar toast. Art party readymade cold-pressed, chicharrones authentic adaptogen 8-bit williamsburg XOXO quinoa gochujang. Tofu vinyl gluten-free, glossier vexillologist poke squid copper mug waistcoat +1. VHS taiyaki disrupt celiac paleo meh cornhole. Blue bottle kogi williamsburg, keytar 3 wolf moon scenester gochujang affogato tumblr mumblecore forage typewriter. Meggings viral fixie brooklyn shabby chic subway tile affogato wolf crucifix. Banjo skateboard man bun, jean shorts tbh vaporware pop-up ramps vinyl brunch forage cray sartorial neutra meh. Whatever poutine keytar, master cleanse glossier tbh sustainable narwhal ethical tumblr artisan. Pinterest keffiyeh retro ennui four dollar toast, whatever four loko glossier mixtape hell of before they sold out raw denim PBR&B edison bulb master cleanse. Organic pitchfork lo-fi whatever adaptogen you probably haven't heard of them.",
+    "group_size": 6,
+    "academic_credits": "WUT?",
+    "lulz_had": "tons",
+    "external_link": "https://en.wikipedia.org/wiki/Beard",
+    "small_image": "small.jpg",
+    "techniques_used": [
+	"SQL",
+	"python3",
+	"interviews"	
+    ],
+    "project_name": "Beardpedia",
+    "course_id": "TDP33",
+    "end_date": "2009-09-09",
+    "project_id": 2,
+    "big_image": "big.jpg"
+  },
+  {
+    "start_date": "2009-09-06",
+    "short_description": "Doing a whole bunch of python labs in a very awesome course",
+    "course_name": "Imperativ programmering",
+    "long_description": "Personal development win-win-win so take five, punch the tree, and come back in here with a clear head punter yet we need to button up our approach. Market-facing message the initiative. Drop-dead date ultimate measure of success. Quick-win killing it it just needs more cowbell yet driving the initiative forward quick win churning anomalies yet pig in a python. Let's unpack that later get buy-in so player-coach when does this sunset? for player-coach but time to open the kimono we want to see more charts. Quick win. Quarterly sales are at an all-time low UI turd polishing, nor imagineer synergize productive mindfulness your work on this project has been really impactful. Beef up can you ballpark the cost per unit for me can I just chime in on that one hard stop, but run it up the flag pole or productize, but shotgun approach. Thought shower market-facing criticality and data-point, but level the playing field when does this sunset? mobile friendly. High touch client game plan going forward. ",
+    "group_size": 8,
+    "academic_credits": "WUT?",
+    "lulz_had": "over 9000",
+    "external_link": "YY",
+    "small_image": "small.png",
+      "techniques_used": ["python",
+			  "git"
+
+    ],
+    "project_name": "Python labs",
+    "course_id": "TDP002",
+    "end_date": "2009-09-07",
+    "project_id": 4,
+    "big_image": "XXX"
+  },
+  {
+    "start_date": "2009-09-06",
+    "short_description": "Bacon",
+    "course_name": "",
+    "long_description": "Shank venison tri-tip, turkey fatback pork chop picanha ham sausage rump kielbasa ribeye boudin. Cow shankle flank, salami shoulder meatball brisket landjaeger turducken leberkas frankfurter bresaola. Turducken tenderloin drumstick pork belly, cow chicken tail. Andouille beef ham hock salami short ribs landjaeger ball tip pork flank shank tongue corned beef filet mignon brisket. Short ribs pork belly sirloin drumstick swine. Picanha rump jowl chicken landjaeger, shank tail ham porchetta filet mignon meatball biltong turkey pastrami pork loin. Ham hock meatloaf salami, sausage shankle pork leberkas flank pork chop bresaola tri-tip prosciutto cupim. Drumstick pastrami shankle picanha, ham hock brisket andouille rump tenderloin beef frankfurter. Short ribs pork loin tenderloin frankfurter fatback ball tip jerky tri-tip ham hock jowl strip steak shank. Fatback pork chop short ribs jowl.",
+    "group_size": 8,
+    "academic_credits": "WUT?",
+    "lulz_had": "over 9000",
+    "external_link": "https://baconipsum.com/",
+    "small_image": "small.jpg",
+      "techniques_used": ["python3",
+			  "git",
+			  "LaTeX"
+
+    ],
+    "project_name": "Baconlicious",
+    "course_id": "",
+    "end_date": "2009-09-07",
+    "project_id": 5,
+    "big_image": "big.jpg"
+  },
+      {
+    "start_date": "2009-09-06",
+    "short_description": "Zombie game",
+    "course_name": "Zombie101",
+    "long_description": "Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.",
+    "group_size": 3,
+    "academic_credits": "2",
+    "lulz_had": "over 9000",
+    "external_link": "https://en.wikipedia.org/wiki/Zombie",
+    "small_image": "small.jpg",
+      "techniques_used": ["python3",
+			  "git",
+			  "LaTeX"
+
+    ],
+    "project_name": "Eatz your brainz",
+    "course_id": "ZOM223",
+    "end_date": "2009-09-07",
+    "project_id": 6,
+    "big_image": "big.png"
+      },
+
+     {
+    "start_date": "",
+    "short_description": "",
+    "course_name": "",
+    "long_description": "",
+    "group_size": "",
+    "academic_credits": "",
+    "lulz_had": "",
+    "external_link": "",
+    "small_image": "",
+      "techniques_used": [],
+    "project_name": "The Uninformative Project",
+    "course_id": "",
+    "end_date": "",
+    "project_id": 8,
+    "big_image": ""
+      }
+    
+]

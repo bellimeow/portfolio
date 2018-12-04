@@ -1,0 +1,5 @@
+\section{Felsökning och felhantering}
+
+Under arbete med portfolion kan fel uppstå på flera olika nivåer. Detta kapitel redogör för vilka metoder och verktyg man kan använda för att undersöka och åtgärda vanliga fel.
+
+\subsection{Felsökning med hjälp av Flask}

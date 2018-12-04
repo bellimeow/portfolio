@@ -1,0 +1,360 @@
+\documentclass{TDP003mall}
+\usepackage{float}
+
+
+
+\newcommand{\version}{Version 1.0}
+\author{Pia Løtvedt, \url{pialo059@student.liu.se}\\
+  Isabella Delgado, \url{isade842@student.liu.se}\\
+Sabrina Bjurman, \url{sebbj070@student.liu.se}}
+
+\title{Projektplan}
+\date{2017-09-14}
+\rhead{Pia Løtvedt\\
+  Isabella Delgado\\
+  Sabrina Bjurman
+}
+
+
+\begin{document}
+\projectpage
+
+\tableofcontents
+\pagebreak
+
+\section{Revisionshistorik}
+\begin{table}[!h]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+Ver. & Revisionsbeskrivning & Datum \\
+\hline
+1.0 & Första version av projektplanen inlämnad & 2017-09-19 \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Översikt}
+Projektets mål är att utveckla en webbportfolio som kan användas för att visa upp en utvecklares olika projekt. Innehållet i portfolion hämtas med hjälp av ett datalager, bestående av en datafil och ett API för att enkelt hämta data. Slutligen ska projektet visas via ett presentationslager som genererar presentationen utifrån informationen om projektet i datalagret. Tekniker som kommer användas för datalagret är Python3 och JSON. För presentationslagret används Python3, Flask, Jinja2, HTML, CSS, Bootstrap och jQuery.
+
+\subsection{Bakgrund och roller}
+Projektet ingår i kandidatprogrammet Innovativ Programmering vid Linköpings Universitet, och utgör kursen TDP003 Projekt: Egna datormiljön. Projektets beställare är kursledningen samt kursens studenter som i framtiden eventuellt kommer att använda portfolion. Tänkta användare är den person som presenterar sina projekt via portfolion, hädanefter kallad ''ägaren'', och de personer som kommer att gå in och kolla på portfolion, hädanefter kallad ''användaren''.
+
+\subsection{Projektets leverabler}
+Projektets leverabler består av två huvuddelar, ett datalager och ett presentationslager.
+
+\subsubsection{Datalager}
+Datalagret ska hantera all data som finns som underlag till portfolion, och består av två delar, en datafil och ett API som hämtar ut data.
+
+All data sparas i \textit{JavaScript Object Notation} (JSON) i en textfil. Denna fil ska innehålla information om varje projekt som ska visas på hemsidan och inkludera projektnamn, startdatum, kort beskrivning, lång beskrivning, gruppstorlek, kurspoäng, projekt-ID, kursnamn, bildinformation och använda tekniker. Av dessa är projektnamn och projekt-ID obligatoriska.
+
+API:et kommer skrivas i Python3 och bestå av ett antal funktioner som kan användas för att hämta ut data i olika former. Det ska finnas funktioner för att läsa in en datafil med data i JSON-format, en funktion som räknar antal projekt, en som hämtar ett specifikt projekt baserat på projekt-ID, en som hämtar ut alla tekniker från projekten, en som hämtar statistik om använda tekniker, och en som möjliggör sökning på olika kriterier.
+
+\subsubsection{Presentationslager}
+Presentationslagret ska presentera informationen från datalagret i form av en webbplats. Användaren efterfrågar information genom att navigera in på olika sidor på webbplatsen, samt genom att utföra sökningar. Med hjälp av API:et hämtas informationen, och dynamiska webbsidor genereras med hjälp av Flask och Jinja2. HTML och CSS kommer att användas för sidans struktur och design. Bootstrap kommer användas som stöd i designarbetet, och jQuery behövs för viss interaktivitet på sidorna.
+
+Fyra huvudkategorier av sidor kommer att finnas:
+\begin{itemize}
+\item index - Förstasida med information om ägaren samt nyaste projekt.
+\item list - Sökbar lista med ägarens alla projekt.
+\item project - Sida med information om ett specifikt projekt.
+\item techniques - Sida med information om de tekniker som ingår i portfolions diverse projekt.
+\end{itemize}
+
+
+
+\subsection{Projektgruppens organisation och arbete}
+Projektgruppen består av tre studenter från kandidatprogrammet Innovativ Programmering vid Linköpings Universitet:
+
+Sabrina Bjurman\\
+Isabella Delgado\\
+Pia Løtvedt
+
+Alla medlemmar av projektgruppen har en liknande teknisk bakgrund, och alla kommer att vara involverade i samtliga delar av projektet.
+
+Projektgruppen kommer att arbeta med kontinuerlig kommunikation och uppföljning av varandras arbete. Gruppen har projektmöte varje måndag för att diskutera arbetets fortgång, eventuella problem, samt planer för den kommande veckan. På dessa möten kommer även planer för utbildning av gruppmedlemmar diskuteras, samt andra behov som dyker upp under projektets gång. Intag av fika ingår alltid i mötesagendan för teambuilding och motivation.
+
+Delning av projektets dokument och källkod, samt versionshantering, kommer att ske via GitLab, och allt arbete ska börja med att ladda ner den senaste versionen från det gemensamma repository som finns på servern. Varje nyimplementerad funktion ska läggas upp på servern innan annat arbete påbörjas.
+
+\pagebreak
+\section{Fasplan}
+Projektet består av fyra huvudfaser som huvudsakligen sker efter varandra, men som kommer att överlappa till en viss grad.
+\begin{itemize}
+\item \textbf{Förberedelse:} Projektgruppen sätter sig in i projektets innehåll och skriver förberedande dokument så som planeringsdokument, projektplan och LoFi-prototyp. Gruppen får en uppfattning om vilka tekniker som kommer att ingå, och kan börja lära sig dessa tekniker.
+\item \textbf{Konstruktion:} Konstruktion av datalagrets API samt presentationslagret sker i denna fas. Systemdokumentation ska skrivas, och tester av systemet ska genomföras.
+\item \textbf{Överlämning:} Projektet ska färdigställas och sedan inlämnas.
+\end{itemize}
+
+\pagebreak
+\section{Tidsplan}
+Projektets arbete ska möta ett antal milstolpar och deadlines. Milstolpar består av kriterier som projektgruppen har formulerat för färdigställande av olika delar i projektet. Milstolpar kan anses vara verktyg för att uppnå deadlines. Deadlines har fastställts av projektets beställare.
+
+\subsection{Milstolpar}
+
+\begin{table}[!h]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Område} & \textbf{Milstolpe} & \textbf{Preliminärt mål} & \textbf{Avklarat}\\
+\hline
+Datalager & Funktioner för att ladda data från fil och hämta projektrelaterad information från inladdad data & 2017-09-20 & 2017-09-20\\
+\cline{2-4}
+& Funktioner för att hämta tekniker från enskilda projekt och lista upp statistik för tekniker & 2017-09-22 & 2017-09-20\\
+\cline{2-4}
+& Funktion för sökning i projektlistan klar & 2017-09-27 & 2017-09-26\\
+\hline
+Presentationlager & Projektlistan utseendemässigt klar & 2017-09-29 &\\
+\cline{2-4}
+& Sökfunktion i projektlistan klar & 2017-10-03 &\\
+\cline{2-4}
+& Projektsidan klar & 2017-10-04&2017-10-02\\
+\cline{2-4}
+& Framsida klar & 2017-10-05 & 2017-10-02\\
+\cline{2-4}
+& Navigeringsbar klar & 2017-10-05 & 2017-10-02\\
+\cline{2-4}
+& Tekniksidan utseendemässigt klar & 2017-10-06  &\\
+\cline{2-4}
+& Filtreringsfunktion på tekniksidan klar & 2017-10-09 & 2017-10-02\\
+\hline
+Bonusuppgifter & Länkar till diverse sociala medier på framsidan i portfolion & 2017-10-11 & 2017-10-02\\
+\cline{2-4}
+& Slumpgenerade kodsnuttar på framsidan i portfolion & 2017-10-11 &\\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Deadlines}
+
+
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Deadline} & \textbf{Datum avklarat}\\
+\hline
+Planeringsdokument inlämnad & 2017-09-07 & 2017-09-06\\
+\hline
+ LoFi-prototyp inlämnad & 2017-09-14 & 2017-09-13\\
+Gruppens installationsmanual inlämnad & & 2017-09-13\\
+\hline
+Första utkast av projektplanen inlämnat & 2017-09-21 & 2017-09-19\\
+Första version av gemensamma installationsmanualen inlämnad & & 2017-09-21\\
+\hline
+ Brister i projektplanen korrigerade & 2017-09-28 &\\
+Brister i gemensamma installationsmanualen korrigerade && 2017-09-28 \\
+\hline
+ Datalagret godkänt & 2017-09-29 & 2017-09-29\\
+\hline
+Portfolion tillgänglig via OpenShift & 2017-10-12 &\\
+Första version av systemdokumentationen inlämnad & & \\
+\hline
+ Systemdemonstration för andra grupper & 2017-10-17 &\\
+\hline
+ Brister i systemdokumentationen korrigerade & 2017-10-19 &\\
+Testdokumentation inlämnad & &\\
+Individuellt reflektionsdokument inlämnat & &\\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\pagebreak
+\section{Detaljerad tidplan}
+Nedan följer en genomgång av kursens generella tidplan och deadlines.
+
+\subsection{Vecka 36}
+
+\textbf{Fas:} Förberedelse
+
+\textbf{Deadlines:} Inlämning av planeringsdokumentet - torsdagen den 7 september.
+
+\textbf{Kommentarer:}
+Planeringsdokument med en generell tidplanering ska skrivas och lämnas in.\\
+Gruppen sätter sig in i projektets utformning och tillgänglig information.\\
+Efter inlämning av planeringsdokument kan arbete med LoFi-prototyp och installationsmanual börjas.
+\\
+
+\begin{table}[!h]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidgång} & \textbf{Faktisk tidgång}\\
+\hline
+Planeringsdokument & Skriva och lämna in ett dokument med en generell tidplanering. & 4h & 3h \\
+\hline
+Läsa på om projektet & Läsa igenom kravspecifikation, information på projektkursens hemsida. & 1h & 1h\\
+\hline
+LoFi-prototyp & Börja skapa en LoFi-prototyp som ska lämnas in kommande vecka. & 1h & 2h\\
+\hline
+Installationsmanual & Börja skapa en installationsmanual som ska lämnas in kommande vecka. & 1h  & 2h\\
+\hline
+
+\end{tabularx}
+\end{table}
+
+
+\subsection{Vecka 37}
+
+\textbf{Fas:} Förberedelse
+
+\textbf{Deadlines:} LoFi-prototyp, grundläggande installationsmanual - torsdagen den 14 september
+
+\textbf{Kommentarer:}
+LoFi-prototyp samt installationsmanual ska göras klar till deadline, stavning och språk ska kontrolleras innan inlämning.\\ Utbildning inom Flask och Jinja2 ska göras av samtliga i projektgruppen. \\Projektplan ska påbörjas.\\
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidgång} & \textbf{Faktisk tidgång}\\
+\hline
+LoFi-prototyp & Göra klart och lämna in LoFi-prototypen. & 5h  & 3h \\
+\hline
+Installationsmanual & Göra klart och lämna in gruppens installationsmanual. & 3h & 4h \\
+\hline
+Flask och Jinja2 & Läsa på om och testa Flask och Jinja2. & 3h  & 4h \\
+\hline
+Projektplan & Börja skriva projektplan. & 4h & 6h \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\subsection{Vecka 38}
+
+\textbf{Fas:} Förberedelse, konstruktion
+
+\textbf{Deadlines:} Första utkast till gemensamma installationsmanualen, första utkast till projektplanen - torsdagen den 21 september
+
+\textbf{Kommentarer:}
+Projektplanen ska färdigställas och lämnas in.\\
+Lämna in ett bidrag till den gemensamma installationsmanualen som ligger på GitLab.\\
+Påbörja datalagrets funktioner som står specificerade i kravspecifikationen.\\
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidåtgång} & \textbf{Faktisk tidåtgång}\\
+\hline
+Projektplan & Skriva klart och lämna in projektplan. & 6h  & 6h \\
+\hline
+Datalager & Påbörja datalagret. & 7h & \\
+\hline
+Installationsmanualen & Lägg in ett bidrag till den gemensamma installationsmanualen. & 1h & 1h \\
+\hline
+
+
+
+\end{tabularx}
+\end{table}
+
+\subsection{Vecka 39}
+
+\textbf{Fas:} Konstruktion
+
+\textbf{Deadlines:} Korrigerad projektplan, korrigerad installationsmanual - torsdagen den 28 september\\
+Datalagret godkänt - fredagen den 29 september
+
+\textbf{Kommentarer:}
+Projektplanen och den gemensamma installationsmanualen ska korrigeras och lämnas in.\\
+Slutföra funktionerna till datalagret och testa dessa.\\
+Parallellt påbörjas även jobb med systemdokumentationen.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidåtgång} & \textbf{Faktisk tidåtgång}\\
+\hline
+Korrigering & Korrigera projektplan samt installationsmanual vid behov.  & 2h  & \\
+\hline
+Datalager & Inlämning av datalager.  & 13h  & \\
+\hline
+Systemdokumentation & Påbörja systemdokumentation.  &  2h  &   \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\subsection{Vecka 40}
+
+\textbf{Fas:} Konstruktion
+
+\textbf{Deadlines:} Inga
+
+\textbf{Kommentarer:} Presentationslager påbörjas och parallellt skrivs systemdokumentationen. \\
+Testning av systemet genomförs.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidåtgång} & \textbf{Faktisk tidåtgång}\\
+\hline
+Presentationslager & Presentationslagret påbörjas. & 25h & \\
+\hline
+Systemdokumentation & Fortsättning av systemdokumentation. & 4h & \\
+\hline
+Testning & Tester av systemet görs. & 6h & \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\subsection{Vecka 41}
+
+\textbf{Fas:} Konstruktion, överlämning
+
+\textbf{Deadlines:} Portfolion på OpenShift, inlämning av systemdokumentation - torsdagen den 12 oktober
+
+\textbf{Kommentarer:} Portfolion slutförs och eventuella testningar utförs innan slutförandet.\\
+Systemdokumentationen slutförs och lämnas in.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidåtgång} & \textbf{Faktisk tidåtgång}\\
+\hline
+Presentationslager & Slutföra presentationslager. & 10h & \\
+\hline
+OpenShift & Portfolion ska finnas tillgänglig på OpenShift. & 4h & \\
+\hline
+Systemdokumentation & Lämna in första version av systemdokumentation. & 4h & \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\subsection{Vecka 42}
+
+\textbf{Fas:} Överlämning
+
+\textbf{Deadlines:} Reflektionsdokument, testdokumentation, korrigerad systemdokumentation - torsdagen den 19 oktober
+
+\textbf{Kommentarer:} Presentation av portfoliosystemet inför andra projektgrupper.\\
+Testdokumentationen ska skrivas med presentationen som grundlag.\\
+Korrigering av systemdokumentationen vid behov.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|l|X|l|l|}
+\hline
+\textbf{Aktivitet} & \textbf{Beskrivning} & \textbf{Estimerad tidåtgång} & \textbf{Faktisk tidåtgång}\\
+\hline
+Systemdemonstration & Presentera systemet för andra projektgrupper. & 6h & \\
+\hline
+Testdokumentation & Skriva och lämna in testdokumentation. & 6h & \\
+\hline
+Systemdokumentation & Eventuell korrigering av systemdokumentation. & 2h & \\
+\hline
+Reflektionsdokument & Varje gruppmedlem ska lämna in ett reflektionsdokument. & 3h & \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\end{document}

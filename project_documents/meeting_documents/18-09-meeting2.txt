@@ -1,0 +1,54 @@
+#############  Möte 1 - 11/9 ##############
+
+Närvarande: Pia, Sabrina, Isabella
+
+
+Punkter:
+* Summera timmar i veckan för projektet inkl. labbar
+* Diskutera när vi ska ses
+
+---------------------------------------------------
+Förra veckan
+---------------------------------------------------
+Lämnade in LoFi-prototyp och installationsmanual.
+Började på projektplanen.
+Sabrina och Pia har börjat kolla på Flask
+
+
+----------------------------------------------------
+Nästa vecka
+----------------------------------------------------
+Göra klart projektplanen, dvs fylla i tidsplanen. Lämna in tisdag.
+Börja jobba med datalagret.
+Kolla på den gemensamma installationsmanualen och se om vi vill bidra.
+Isabella ska börja jobba med Flask.
+
+
+
+----------------------------------------------------
+Punkter
+----------------------------------------------------
+1. När vi gör tidsplanen, kolla på antal timmar som finns tillgängliga för projektet varje vecka, och hur vi bör fördela tiden.
+2. Vi behöver veta när vi ska sitta och jobba med projektet.
+
+----------------------------------------------------
+------------------- Deadline -----------------------
+----------------------------------------------------
+Torsdag: Projektplan
+Torsdag: Bidrag till den gemensamma installationsmanualen?
+
+
+----------------------------------------------------
+Schema för veckan
+----------------------------------------------------
+
+Måndag: 
+Tisdag: Flex-tid, kom in mellan 9 och 10! Jobb med projektet fram tills kl 15.
+Onsdag: Flex-tid, kom in mellan 9 och 10! Jobb med projektet fram tills lunch.
+Torsdag: Jobba med projektet (dagalagret) från 15.
+Fredag: Flex-tid, kom in mellan 9 och 10. Jobb med projektet fram tills lunch. Efter lunch är Pia borta. Isabella och Sabrina leker med Flask.
+
+
+----------------------------------------------------
+
+FIKA ANSVARIG NÄSTA MÅNDAG: PIA

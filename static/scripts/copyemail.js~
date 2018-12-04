@@ -1,0 +1,12 @@
+new Clipboard('.email');
+
+
+function upperEmail() {
+    var popup = document.getElementById("upper-email");
+    popup.classList.toggle("show");
+}
+
+function lowerEmail() {
+    var popup = document.getElementById("lower-email");
+    popup.classList.toggle("show");
+}

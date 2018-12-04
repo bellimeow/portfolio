@@ -1,0 +1,192 @@
+{% extends "general_layout.html" %}
+{% from "macros.html" import place_icons with context %}
+
+{% block css_files %}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="style/projectsquare.css") }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="style/index.css") }}">
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+{% endblock %}
+
+{% block pagetitle %}{{ author["name"] + "'s portfolio" }}{% endblock %}
+
+
+{% block content %}
+
+<div id="owner">
+
+  <div id="photo">
+    {% if author["photo"] %}
+    <img id="photo-replace" src="{{ url_for("static", filename="images/" + author["photo"]) }}">
+
+    {% endif %}
+  </div>
+
+  <div id="author-info">
+    <h1>{{ author["name"] }}</h1>
+    
+    <p id="profession">{{ author["profession"] }}</p>
+    
+    <a id="aboutmelink" class="btn btn-light btn-outline" href="#aboutme" role="button">About me</a>
+
+    {{ place_icons() }} <!-- The logic and code to place social media icons is moved to the file macros.html and imported. This is because it is used twice, so we don't want to repeat it -->
+   
+  </div>
+
+
+
+</div>
+
+<div class="container">
+  {% if db|length > 0 %}
+  <div id="newest-projects">
+
+
+    <h1>Newest projects</h1>
+
+
+    
+    {% if db|length == 1 %}
+
+    <div class="project-row" id="only-image">
+      {% for project in db %}
+      <div class="large-image">
+	<a href="{{ url_for("show_project", id=project["project_id"]) }}">	  
+	  <div class="project" style="background-image:url({{ url_for("static", filename="images/"+project["small_image"]) }})">
+	    <div class="hidden-project">
+	      <h1>{{ project["project_name"] }}</h1>
+	      <p>{{ project["short_description"] }}</p>
+	    </div>
+	  </div>
+	</a>
+	{% endfor %}
+      </div>
+    
+    </div>
+
+
+    
+    {% else %} <!-- if more than 1 project in db -->
+
+    <div class="project-row">
+      {% for project in db[:2] %} <!-- First two projects should be big  -->
+
+      <div class="large-image">
+	<a href="{{ url_for("show_project", id=project["project_id"]) }}">
+	  <div class="project" style="background-image:url({{ url_for("static", filename="images/"+project["big_image"]) }})">	
+	    <div class="hidden-project">
+	      <h1>{{ project["project_name"] }}</h1>
+	      <p>{{ project["short_description"] }}</p>
+	    </div>	
+	  </div>
+	</a>
+      </div>
+      {% endfor %}
+
+    </div> <!-- project-row end -->
+
+    {% if db|length == 5 %} <!-- if db is in total 5 projects long, place three small images on the next row -->
+
+    <div class="project-row">
+      
+      {% for project in db[2:] %}
+      <div class="small-image">
+	<a href="{{ url_for("show_project", id=project["project_id"]) }}">
+	  <div class="project" style="background-image:url({{ url_for("static", filename="images/"+project["big_image"]) }})">
+	    <div class="hidden-project">
+	      <h1>{{ project["project_name"] }}</h1>
+	      <p>{{ project["short_description"] }}</p>
+	    </div>	
+	  </div>
+	</a>
+      </div>
+      {% endfor %}
+      
+    </div> <!-- project-row end -->
+    
+    {% elif db|length == 3 %} <!-- if db is in total 3 projects long, place one big image on the next row -->
+    <div class="project-row" id="only-image">
+      
+      {% for project in db[2:] %}
+      <div class="large-image">
+	<a href="{{ url_for("show_project", id=project["project_id"]) }}">
+	  <div class="project" style="background-image:url({{ url_for("static", filename="images/"+project["big_image"]) }})">
+	    <div class="hidden-project">
+	      <h1>{{ project["project_name"] }}</h1>
+	      <p>{{ project["short_description"] }}</p>
+	    </div>	
+	  </div>
+	</a>
+      </div>
+      {% endfor %} 
+
+    </div> <!-- project-row end -->
+
+    {% else %} <!-- if db is 4 projects long, place two big images on the next row -->
+    <div class="project-row">
+      
+      {% for project in db[2:] %}
+      <div class="large-image">
+	<a href="{{ url_for("show_project", id=project["project_id"]) }}">
+	  <div class="project" style="background-image:url({{ url_for("static", filename="images/"+project["big_image"]) }})">
+	    <div class="hidden-project">
+	      <h1>{{ project["project_name"] }}</h1>
+	      <p>{{ project["short_description"] }}</p>
+	    </div>	
+	  </div>
+	</a>
+      </div>
+      {% endfor %}
+      
+    </div> <!-- project-row end -->
+    
+    {% endif %}
+    
+
+    
+
+    <div class="col-sm-12 small-projects">
+      
+      {% for project in db[2:] %}
+      
+
+
+
+      {% endfor %}
+      
+      
+    </div>
+    
+
+    {% endif %}
+
+  
+  </div>
+  {% endif %}
+
+</div>
+
+
+<div id="aboutme">
+
+  <div class="container">
+
+    <h1>About me</h1>
+
+    <p>{{ author["about_me"] }}</p>
+
+
+    {{ place_icons() }}
+
+  </div>
+
+  
+
+
+  
+</div>		  
+
+<script src="{{ url_for("static", filename="scripts/copyemail.js") }}"></script>
+<script src="{{ url_for("static", filename="scripts/projecthover.js") }}"></script>
+
+
+{% endblock %}

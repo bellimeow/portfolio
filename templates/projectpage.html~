@@ -1,0 +1,4 @@
+<!-- Page used to show info about a single project -->
+{% extends "general_layout.html" %}
+
+

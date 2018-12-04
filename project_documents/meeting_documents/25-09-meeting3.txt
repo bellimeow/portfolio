@@ -1,0 +1,59 @@
+#############  Möte 1 - 25/9 ##############
+
+Närvarande: Pia, Isabella
+
+
+Punkter:
+* Ligger före planeringen
+
+---------------------------------------------------
+Förra veckan
+---------------------------------------------------
+Vi lämnade in projektplanen i tisdags, och fick bra feedback på den, ingen komplettering. Möjligtvis kommer det någon komplettering från Filip.
+Vi fick feedback och godkännande på LoFi-prototypen och installationsmanualen.
+Vi jobbade med datalagret, och gjorde alla funktioner. Återstår lite jobb och testning av sökfunktionen.
+Vi gjorde ett bidrag till den gemensamma installationsmanualen, slängde in pip.
+Bella jobbade med Flask
+Bella skapade en mapp och ett dokument för systemdokumentationen.
+
+
+
+----------------------------------------------------
+Nästa vecka
+----------------------------------------------------
+Vi ska göra sökfunktionen och redovisa datalagret. Deadline på fredag, men vi gör det helst tidigare, när Sabrina är tillbaka från sin förkylning.
+Vi ska börja på presentationslagret. Första milstolpe, som är att göra klart projektlistan utseendemässigt, har vi lagt på fredag.
+Vi har föreläsning om Flask och Jinja2 på måndagen.
+Pia är på biologi torsdag fram till lunch.
+Vi skriver på systemdokumentationen.
+Vi vill försöka bidra med tester.
+
+
+
+----------------------------------------------------
+Punkter
+----------------------------------------------------
+1. Vi är awesome och ligger före planeringen. 
+
+----------------------------------------------------
+------------------- Deadline -----------------------
+----------------------------------------------------
+Torsdag: Komplettering av gemensamma installationsmanualen	
+Fredag: Redovisa datalagret
+
+
+
+----------------------------------------------------
+Schema för veckan
+----------------------------------------------------
+
+Måndag: Föreläsning om Flask och Jinja2. Bidrag till gemensamma installationsmanualen.
+Tisdag: Flex-tid, kom in mellan 9 och 10! Labb 10-12. Vi testar sökfunktionen och gör bidrag till testerna.
+Onsdag: Redovisa datalagret om möjligt! Börja på presentationslagret.
+Torsdag: Pia är borta till lunch. Jobba med presentationslagret. 
+Fredag: Flex-tid, kom in mellan 9 och 10. Jobba med presentationslagret, gör klart projektlistan utseendemässigt.
+
+
+----------------------------------------------------
+
+FIKA ANSVARIG NÄSTA MÅNDAG: BELLA

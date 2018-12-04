@@ -1,0 +1,36 @@
+/* Styles for the project squares used on front page, techniques and project list, for the hover-over effect  */
+
+.project {
+  border: 2px solid #1b2631;
+  margin: 10px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.hidden-project {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(27, 38, 49, 0.9);
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    transition: 0.3s all;    
+}
+
+
+.hidden-project h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: 10%;
+    
+}
+
+.hidden-project p {
+    margin-top: 20%;
+}

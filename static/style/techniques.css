@@ -1,0 +1,100 @@
+.container {
+  margin: 0 auto;
+}
+
+.techniques-container {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.techniques-row {
+  padding: 0;
+}
+
+.techniques-col {
+  margin: auto;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.techniques-col-21 {
+  padding-left: 16.7%;
+}
+.techniques-col-22 {
+  padding-right: 16.7%;
+}
+
+
+.technique {
+  margin: auto;
+  padding: 0;
+  border-style: solid;
+  //border-width: 2px;
+  height: 48px;
+  width: 18vw;
+  box-sizing: border-box;
+  display: block;
+
+  border-radius: 4px;
+  background-color: #7F7F7F;
+  border-color: #7F7F7F;
+  line-height: 0;
+  font-size: 18px;
+  overflow: hidden;
+  text-align: center;
+  font-weight: bold;
+}
+.technique-label {
+  color: black;
+}
+.technique-wings {
+  color: purple;
+}
+
+.project {
+    border: 2px solid white; 
+}
+
+
+
+.hidden-project h1 {
+    font-size: 30px;
+}
+
+
+.btn-default.active:hover {
+    background-color: white;
+}
+
+.btn-default {
+    background-color: #1b2631;
+    transition: all 0.3s;
+}
+
+.btn-default .technique-label {
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-default.active .technique-label {
+    color: #1b2631;
+}
+
+.btn-default:hover .technique-label {
+    color: #1b2631;
+}
+
+
+
+.btn-outline {
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px white;
+    background-color: #273646;
+    color: white;
+}
+
+.btn:focus {
+    outline: none !important;
+}

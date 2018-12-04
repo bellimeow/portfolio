@@ -1,0 +1,205 @@
+.container {
+    margin: 0 auto;
+}
+
+.container-projectlist {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  width: 80%;
+  
+}
+
+.col-clear-all {
+    text-align: center;
+    padding-left: 0;
+}
+
+#clearall {
+    width: 100%;
+}
+
+
+
+.btn:focus {
+    outline: none !important;
+}
+
+
+.row-search {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  
+}
+
+
+
+.row-projectlist  {
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+#filter-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+}
+
+#filter-buttons > * {
+    margin: 0 15px;
+}
+
+#filter-buttons > .col-sort-by {
+    margin-right: 0;
+}
+
+.col-sort-by {
+    width: 40%;
+}
+
+
+.project {
+    border: 2px solid white; 
+}
+
+
+.hidden-project h1 {
+    font-size: 30px;
+}
+
+.row-search {
+    margin-bottom: 2vh;
+}
+
+.col-search-bar {
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.col-search-bar .form-control {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.col-search-bar .btn-default{
+    background-color: #1b2631;
+    color: white;
+    border-left: none;
+}
+
+.form-control:focus {
+    border-color: white;
+    border-right: none;
+    box-shadow: none;
+}
+
+
+#sortbypicker {
+    padding-top: 5.5px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 85%;
+    
+}
+
+#sortbypicker * {
+    color: black;
+    
+}
+
+.btn-outline {
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px white;
+    background-color: #273646;
+    color: white;
+}
+
+
+
+.col-sort-by .input-group-addon {
+    border: none;
+    color: white;
+    background-color: transparent;
+    padding-right: 7px;
+}
+
+
+#order {
+    display:flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+#order .btn-default {
+    height:50%;
+    font-size: 9px;
+    padding: 0 5px;
+    
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    
+}
+
+#order .btn-default:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-default:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-default:focus {
+    background-color: white;
+    color: black;
+}
+
+.open > .dropdown-toggle.btn-default:focus {
+    background-color: white;
+    color: black;
+}
+
+
+.col-sort-by .input-group {
+    height: 100%;
+
+}
+
+.input-group-btn {
+    font-size: 10px;
+    
+}
+
+.input-group-btn label {
+    margin-bottom: 0;
+    height: 50%;
+    padding-top: 2px;
+    width: 15px;
+    text-align: center;
+}
+
+.input-group-btn label:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.input-group-btn input[type="radio"]:checked+label {
+  background-color: #5d778f;
+}
+
+
+
+#order input {
+    display:none;
+}

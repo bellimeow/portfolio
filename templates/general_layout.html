@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>{% block pagetitle %}CHANGE THIS TITLE{% endblock %}</title>
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for("static", filename = "style/bootstrap.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="style/general.css") }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    {% block css_files %} {% endblock %}
+    <script src="https://use.fontawesome.com/a446617dac.js"></script>
+
+    {% from "macros.html" import nav_link with context %}.
+
+  </head>
+
+
+  <body>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	{{ nav_link('website_index', 'Home') }}
+	{{ nav_link('project_list', 'Projects') }}
+	{{ nav_link('project_techniques', 'Techniques') }}
+      </ul>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+    {% block content %}{% endblock %}
+
+    <div id="copyright">
+      &copy; 2017 Sabrina Bjurman, Isabella Delgado, Pia Løtvedt
+    </div>
+
+
+
+    <script src="{{ url_for("static", filename="style/bootstrap.js") }}"></script>
+
+
+  </body>
+</html>

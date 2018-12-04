@@ -1,0 +1,204 @@
+\documentclass{TDP003mall}
+\usepackage{lipsum,hyperref}
+\usepackage{pdflscape}
+\usepackage{longtable}
+
+
+
+\newcommand{\version}{Version 1.0}
+\author{Pia Løtvedt, \url{pialo059@student.liu.se}\\
+  Isabella Delgado, \url{isade842@student.liu.se}\\
+  Sabrina Bjurman, \url{sebbj070@student.liu.se}}
+\title{Testdokumentation}
+\date{2017-10-18}
+\rhead{Pia Løtvedt\\
+Isabella Delgado\\
+Sabrina Bjurman}
+
+
+
+\begin{document}
+\projectpage
+
+\tableofcontents
+\pagebreak
+\section{Revisionshistorik}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+Ver. & Revisionsbeskrivning & Datum \\\hline
+1.0 & Första version av testdokumentationen. & 171019 \\\hline
+\end{tabularx}
+\end{table}
+
+
+\section{Testdokumentation}
+
+Syftet med den här testdokumenationen är att förklara hur de olika kraven för portfolion testas för att säkerställa att systemet fungerar. För varje funktionellt krav i punktform kommer det att presenteras minst två möjliga tester. En del krav kan enbart testas genom att visuellt undersöka en webbsida eller datafilen. I några av dessa fall finns det endast ett test man kan göra, och då presenterar vi endast det ena testet. 
+
+\subsection{Krav för presentation}
+
+%%%%%%%% Skriv testfallen enligt detta: För att uppnå repeterbarhet måste varje testfall specificeras noga. Beskriv vilket krav som testas (hänvisa till kravspec), och lista alla indata. Beskriv den utdata som förväntas med den givna indatan. Tänk på att varje krav bör testas med olika uppsättning indata, både för normallfall och undantagsfall. Det blir alltså flera testfall per krav.
+
+%Varje funktionellt krav skall ha minst två relevanta testfall, ett med normal indata och ett med felaktig indata. %Dessa skall vara motiverade och dokumenterade för att vara repeterbara.
+
+%%%%%%%%%%%%%
+
+Nedan ses en lista över krav relaterade till portfolions presentationslager. Tabell \ref{table:presentationskrav} och \ref{table:presentationskrav2} redogör för tester av dessa krav.
+
+\begin{enumerate}
+\item[P1 - ] Förstasida med bilder. URL:/
+\item[P2 - ] Söksida som visar en lista över projekt med kort information om varje projekt och som gör det möjligt att sortera dessa, samt söka bland dem genom ett formulär på sidan. Url: /list
+\item[P3 - ] Projektsida som visar fullständig information om ett projekt. GETvariabel för att ange projekt-id: id URL: /project/id - där id är projektets nummer.
+\item[P4 - ] Tekniksida som visar information om alla projekt utifrån använda tekniker. URL: /techniques
+\item[P5 - ] För varje projekt ska en liten bild visas på söksidan och en stor på projektsidan. Det behöver inte vara samma bild. Bildtext för varje bild skall finnas.
+\item[P6 - ] Vid fel ska systemet skriva ut informativa meddelanden till användaren på en lämplig nivå för en slutanvändare. (Det vill säga, systemet ska fånga och omvandla felkoder och statuskoder till begripliga meddelanden.)
+\item[P7 - ] När en användare försöker visa ett projekt som inte finns ska korrekt statuskod returneras (dvs. 404).
+\end{enumerate}
+
+\begin{landscape}
+  {\renewcommand{\arraystretch}{1.2}
+    \begin{table}[!h]
+    
+    \begin{tabularx}{\linewidth}{|l|X|X|X|l|}
+      \hline
+      Krav & Test & Indata & Förväntad utdata & Teststatus\\
+      \hline
+      P1 & Navigera in på portfolions startsida (URL: /). & Visuell inspektion av framsida. & Portfolion har en framsida som innehåller bilder. & Godkänt. \\
+      \hline
+      P2, P5 & Navigera in på portfolions projektlista (URL: /list). & Visuell inspektion av sidan. & Längst upp finns ett sökformulär med möjlighet att söka på en sträng, begränsa till någon av alla tekniker som finns i datafilen, välja vilka fält som ska sökas, samt välja vilket fält som ska sorteras på och sorteringsordning. Under sökformuläret visas alla projekt som finns i datafilen. Varje projekt visas som en liten bild, där man kan trycka på bilden för att komma till projektens sida. & Godkänt. \\
+      \hline
+      P2 & Navigera in på på portfolions projektlista (URL: /list). Under Techniques, välj ''Bootstrap'', Under Sort by, välj ''Group size''. Tryck på pilen nedåt bredvid Sort by. Tryck på söknappen. & Visning av projektlistan samt sökning. Visuell inspektion. & Före sökning: Alla datafilens projekt ska visas. Efter sökning: Enbart projekt där tekniken Bootstrap har använts ska visas, och dessa ska vara rangerade efter sjunkande gruppstorlek. Om ourdata.json inte har ändrats ska projekten Cats United och Portfolio visas i den ordningen. & Godkänt.\\
+      \hline
+      P2 & Navigera in på på portfolions projektlista (URL: /list). I sökrutan, skriv ett ord som inte finns med i något projekt. Om ourdata.json inte har ändrats kan ordet ''banana'' användas. Tryck på sökknappen. & Visuell inspektion av sidan. & Efter sökning: Inga projekt ska visas. & Godkänt. \\
+      \hline
+      P3 & Navigera in på följande URL: /project/1. & Visuell inspektion av sidan. & Sidan visar en stor och en liten bild. Projektets namn visas under den största bilden. En längre beskrivning av projektet visas om detta fanns med i datafilen. I den mindre rutan på höger sida av projektsidan visas annan information om projektet. Ingen information utan värde syns. & Godkänt. \\
+      \hline
+
+      P4 & Navigera in på portfolions tekniksida (URL: /techniques). & Visuell inspektion av sidan. & Knappar för varje teknik som finns i datafilen syns längst upp. Under syns alla projekt som finns i datafilen. & Godkänt. \\
+      \hline
+      
+      
+    \end{tabularx}
+    \caption{Tester för att testa presentationskrav. Alla testbeskrivningar utgår från att servern är startad och att en webbläsare är öppen. Teststatus är resultat vid senaste test. Kraven är numrerade enligt listan över krav för presentationslagret.}
+    \label{table:presentationskrav}
+  \end{table}
+  }
+
+  {\renewcommand{\arraystretch}{1.2}
+    \begin{table}[!h]
+    
+    \begin{tabularx}{\linewidth}{|l|X|X|X|l|}
+      \hline
+      Krav & Test & Indata & Förväntad utdata & Teststatus\\
+      \hline
+      P4 &  Navigera in på portfolions tekniksida (URL: /techniques). Välj två tekniker. Om filen ourdata.json inte har ändrats kan teknikerna ''SQL'' och ''Python3'' väljas. & Visuell inspektion av sidan. & Sidan ska uppdateras. Knapparna för valda tekniker ska markeras för att visa att de är valda. Enbart projekt som har båda valda tekniker ska visas. Om filen ourdata.json inte har ändrats ska projektet ''Beardpedia'' visas. & Godkänt. \\
+      \hline
+      P5 & Navigera in på söksidan (URL: /list). & Visuell inspektion av sidan. & Söksidan ska ha en liten bild på varje projekt. Bildtext för varje bild ska finnas & Ej godkänt. \\
+      \hline
+      P5 & Skriv in följande URL efter server-namnet i sökbaren: /project/1. & Visuell inspektion av sidan. & Projektsidan ska ha en stor bild på projektet. Bildtext för varje bild ska finnas. & Ej godkänt. \\
+      \hline
+      P6 & Skriv in följande URL efter server-namnet i sökbaren: /finnsej. & Visuell inspektion av sidan. & Sidan ska visa texten ''Not Found''. Sidans titel i browsern ska vara ''404 Not Found''. & Godkänt. \\
+      \hline
+      P6, P7 & Skriv in följande URL efter server-namnet i sökbaren: /project/20 (talet behöver vara högre om det är flera projekt i datafilen). & Visuell inspektion av sidan. & Sidan ska visa texten ''Not Found''. Sidans titel i browsern ska vara ''404 Not Found''. & Godkänt. \\
+      \hline
+      P6, P7 & Skriv in följande URL efter server-namnet i sökbaren: /project/beard.  & Visuell inspektion av sidan. & Sidan ska visa texten ''Not Found''. Sidans titel i browsern ska vara ''404 Not Found''. & Godkänt. \\
+      \hline
+      
+    \end{tabularx}
+    \caption{Tester för att testa presentationskrav. Alla testbeskrivningar utgår från att servern är startad och att en webbläsare är öppen. Teststatus är resultat vid senaste test. Kraven är numrerade enligt listan över krav för data.}
+    \label{table:presentationskrav2}
+  \end{table}
+  }
+  
+\end{landscape}
+
+
+\subsection{Krav för data}
+
+Nedan ses en lista över krav relaterade till portfolions behandling av data. Tabell \ref{table:datakrav} redogör för tester av dessa krav. Notera att krav D2-D6 testas genom att köra filen ''data-test.py''. Denna fil specificerar ett antal test för systemet, och redovisar en lista med resultat. Testerna som ingår i filen beskrivs inte här, men kan ses genom att öppna filen och gå igenom koden. 
+
+\begin{enumerate}
+\item[D1 - ] Systemet ska kunna hantera följande information om ett projekt: projektnamn, projekt-id-nummer, startdatum, slutdatum, kurskod, kursnamn, kurspoäng, använda tekniker, kort beskrivning, lång beskrivning, liten och stor bild, gruppstorlek och en länk projektsida. Projektnamn och projekt-id är obligatoriska, övriga fält kan lämnas tomma.
+\item[D2 - ] Projekt-id ska vara ett unikt heltal för varje projekt.
+\item[D3 - ] Varje projekt kan ha en sekvens av tekniker angivna.
+\item[D4 - ] Sökning ska kunna göras på godtycklig projektinformation. Sökning kan ske på flera fält samtidigt. Sortering ska kunna göras på ett fält, i stigande och fallande träffordning. Man ska kunna filtrera utifrån använda tekniker i sökningen. Observera att allt ska fungera tillsammans, så att man kan söka på ett sökord, filtrera till vissa tekniker och sortera söklistan i en viss ordning samtidigt.
+\item[D5 - ] Data lagras i JavaScript Object Notation (JSON) i filen data.json. Filen ska lagras med UTF-8 teckenkodning.
+\item[D6 - ] Data läggs till i JSON-filer manuellt (eller av andra verktyg) i systemet.
+\item[D7 - ] Förändring av data.json ska slå igenom direkt i systemet utan omstart av webbserver.
+\end{enumerate}
+
+\begin{landscape}
+  {\renewcommand{\arraystretch}{1.2}
+  \begin{table}[!h]
+    
+    \begin{tabularx}{\linewidth}{|l|X|X|X|l|}
+      \hline
+      Krav & Test & Indata & Förväntad utdata & Teststatus\\
+      \hline
+      D1& Öppna filen ourdata.json. & Visuell inspektion av filen. & Varje projekt i filen är en dictionary med nycklar tillsvarande kravet. & Godkänt. \\
+      \hline
+      D1, D6, D7 & Öppna filen ourdata.json. Lägg till ett nytt projekt där alla fält förutom projekt\_id och projekt\_namn är tomma. Öppna portfolion, navigera till projektsidan. Hitta projektet och tryck på det för att se projektets sida.& Skapande av ett nytt projekt utan information förutom id och namn. & Ett projekt där enbart namn och id finns visas i projektlistan. Sidan för projektet fungerar. & Godkänt. \\
+      \hline
+      D2 & Öppna filen ourdata.json. & Visuell inspektion av filen. & Varje projekt i filen har ett projekt\_id som är ett unikt heltal. & Godkänt. \\
+      \hline
+      D2, D3, D4, D5 & Exekvera kommando \texttt{python3 data\_test.py}. &  Filen data\_test.py laddar in modulen handledata.py, och testar dess funktioner med hjälp av filen data.json. & Testerna körs utan fel. & Godkänt. \\
+      \hline
+      D7 & Öppna filen ourdata.json. Ändra ett projekts information. Öppna portfolion, navigera till projektsidan. Hitta projektet och tryck på det för att se projektets sida. & Ändring av ett projekt och visuell inspektion av projektsidan. & Ändringar i projektet ska synas i portfolion utan att servern startas om. & Godkänt. \\
+      \hline
+    \end{tabularx}
+    \caption{Tester för att testa datakrav. Alla testbeskrivningar utgår från att testaren redan har navigerat till portfolions rotkatalog. Teststatus är resultat vid senaste test. Kraven är numrerade enligt listan över krav för presentationslagret.}
+    \label{table:datakrav}
+  \end{table}
+  }
+\end{landscape}
+
+\section{Testlogg}
+- Datum för test av de olika kraven och vilka fel som hittades.
+
+\subsection{Krav för presentation}
+Tabell \ref{table:presentationskravlogg} visar testhistorik för tester för kraven för presentationslagret.
+
+  {\renewcommand{\arraystretch}{1.2}
+  \begin{table}[!h]
+    
+    \begin{tabularx}{\linewidth}{|l|X|}
+      \hline
+      Datum & Resultat\\
+      \hline
+      2017-10-17 & Flertalet tester godkända.\\
+      & Funna fel: \\
+      & P5: Projektlistans bilder har inte bildtext. \\
+      & P5: Projektsidans bilder har inte bildtext. \\
+      \hline
+    \end{tabularx}
+    \caption{Logg för test av krav för presentation.}
+    \label{table:presentationskravlogg}
+  \end{table}
+  }
+
+  \subsubsection{Status för rättning av fel}
+  Vid test 2017-10-17 upptäcktes det att testerna för krav P5 inte var godkända, då bilderna i projektlistan och på projektsidan inte har någon bildtext. Detta fel kommer att rättas till snarast. 
+
+\subsection{Krav för data}
+Tabell \ref{table:datakravlogg} visar historik för tester gjorda för kraven för datalagret.
+
+  {\renewcommand{\arraystretch}{1.2}
+  \begin{table}[!h]
+    
+    \begin{tabularx}{\linewidth}{|l|X|}
+      \hline
+      Datum & Resultat\\
+      \hline
+      2017-09-29 & Alla tester godkända. \\
+      \hline
+      2017-10-19 & Alla tester godkända. \\
+      \hline
+    \end{tabularx}
+    \caption{Logg för test av datakrav.}
+    \label{table:datakravlogg}
+  \end{table}
+  }   
+
+
+\end{document}

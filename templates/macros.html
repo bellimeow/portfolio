@@ -1,0 +1,21 @@
+{% macro nav_link(endpoint, name) %}
+{% if "project_list" in request.endpoint and name == "Projects" %}
+<li class="active"><a href="{{ url_for(endpoint) }}">{{name}}</a></li>
+
+{% elif request.endpoint.endswith(endpoint) %}
+<li class="active"><a href="{{ url_for(endpoint) }}">{{name}}</a></li>
+{% else %}
+  <li><a href="{{ url_for(endpoint) }}">{{name}}</a></li>
+{% endif %}
+{% endmacro %}
+
+{% macro place_icons() %}  
+    <p class="social-media">
+      <a class="email popup" data-clipboard-text="{{ author["email"] }}" onclick="upperEmail()"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="popuptext" id="upper-email">Copied to clipboard</span></a>
+      {% for sm in author["social_media"] %}
+      {% if author["social_media"][sm] %}
+      <a href="{{ author["social_media"][sm]}}"><i class="fa fa-{{ sm }}" aria-hidden="true"></i></a>
+      {% endif %}
+      {% endfor %}						       
+    </p>   
+{% endmacro %}

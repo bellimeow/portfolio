@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Changa:300|Open+Sans');
+
+
+#copyright {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1b2631;
+    color: white;
+}
+
+body {
+    background-color: #1b2631;
+    color: white;
+    font-family: 'Changa', sans-serif;
+    
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.navbar {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: inherit;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar ul li {
+    margin: 0 3vw 0;
+    width: 155px;
+    
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: grey;
+}
+
+.navbar-default {
+    background-color: #1b2631;
+    border: none;
+}
+
+.navbar-default .navbar-nav a {
+    transition: all 0.5s;
+}
+
+
+.navbar-default .navbar-nav > .active > a {
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+    background-color: transparent;
+    color: white;
+
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  background-color: transparent;
+}

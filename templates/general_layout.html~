@@ -1,0 +1,14 @@
+
+
+<html>
+  <head><title>{% block pagetitle %}CHANGE THIS TITLE{% endblock %}</title></head>
+  
+  
+  <body>
+    <h1>{% block headline %} HEADTITLE HERE {% endblock %}</h1>
+
+    {% block content %}{% endblock %}
+
+    
+  </body>
+</html>

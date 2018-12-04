@@ -1,0 +1,93 @@
+\documentclass{TDP003mall}
+
+
+
+\newcommand{\version}{Version 1.0}
+\author{Pia Løtvedt, \url{pialo059@student.liu.se}\\
+  Isabella Delgado, \url{isade842@student.liu.se}\\
+  Sabrina Bjurman, \url{sebbj070@student.liu.se}}
+\title{Installationsmanual}
+\date{2017-09-08}
+\rhead{Pia Løtvedt\\
+Isabella Delgado\\
+Sabrina Bjurman}
+
+
+
+\begin{document}
+\projectpage
+
+\tableofcontents
+
+\pagebreak
+\section{Installationsmanualens syfte}
+Installationsmanualen kan användas som stöd för att sätta upp en utvecklarmiljö på en Linux-dator, specifikt Linux Mint 18.2. Om en annan Linux-distribution eller version av Linux Mint används så kan installationsprocessen variera. Manualen är anpassad för att sätta upp en miljö för webbutveckling i Python, och innefattar verktyg för installation av Pythonpaket, versionshantering, texteditor, bildbehandlare och Pythonramverk. För varje nödvändigt verktyg får användaren hjälp att undersöka om verktygen redan finns installerat på datoren. Om verktyget inte finns installeras kan användaren följa de givna instruktionerna för att installera detta.
+
+\pagebreak
+\section{Installation av verktyg}
+Följande verktyg ingår i utvecklarmiljön och behöver installeras:
+
+\begin{itemize}
+  \item Python3
+  \item pip
+  \item Flask och Jinja2
+\end{itemize}
+
+\subsection{Python3} \label{Python3} 
+Python är ett programmeringsspråk med bred användning. Förutom ett välutvecklat standardbibliotek finns det en mängd paket som kan installeras för att utöka språkets funktionalitet, inkluderat ramverk för webbutveckling. Python3 finns ofta redan förinstallerat på Linux-system. Man kan undersöka om det finns på ens dator med följande kommando:
+
+\verb|$ python3 -V|
+
+Är Python3 installerat kommer dess version visas. Om Python3 inte är installerat kan man installera det med följande kommando:
+
+\verb|$ sudo apt-get install python3|
+
+För att undersöka om installationen lyckades kan man starta Python3 i terminalen:
+
+\verb|$ python3|
+
+Om Python3 är installerat kommer terminalens prompt att ändras, från att visa bash-prompten \$, till att visa Python-prompten, \verb|>>>|.
+
+\textbf{Notering:} Portfolion är utvecklad med version 3.5.2 av Python3. Se till så att du har minst denna version installerad.
+
+\subsection{pip}
+pip är ett verktyg som används för att installera Python-paket, och det kommer att användas för att installera Flask och Jinja2.
+
+Man kan undersöka om pip är installerat med hjälp av följande kommando, som bör visa vilken version av pip som finns installerat:
+
+\verb|$ pip -V|
+
+För att installera pip behövs först paketet setuptools och sedan filen get-pip.py.
+
+Installera setuptools med följande kommando:
+
+\verb|$ sudo apt-get install python-setuptools|
+
+Ladda ner filen get-pip.py från \href{https://bootstrap.pypa.io/get-pip.py}{https://bootstrap.pypa.io/get-pip.py}. Detta kan göras vid att öppna länken, högerklicka på sidan och välja alternativet ''Save as...''. Filen kan läggas i valfri katalog. Navigera med terminalen till samma katalog, och kör get-pip.py med följande kommando:
+
+\verb|$ sudo python3 get-pip.py|
+
+pip är nu installerat. Detta kan testas med kommandot \verb|$ pip -V| för att visa pips version.
+
+\textbf{Notering:} Version 20.7.0-1 av python-setuptools eller senare rekommenderas. En senare \textit{minor} version bör fungera (20.X.X-X), men en senare \textit{major} version kan vara inkompatibel med denna installationsmanual. För pip så gäller version 9.0.1, men en senare minor version borde fungera.
+
+
+\subsection{Flask och Jinja2}
+
+Flask är ett mikroramverk för att utveckla webbapplikationer i Python. Det använder sig av mallspråket Jinja2, och när man installerar Flask följer även Jinja2 med.
+
+Eftersom vi tidigare har installerat pip kan vi nu enkelt installera Flask och Jinja2 med hjälp av följande kommando:
+
+\verb|$ sudo pip install flask|
+
+För att testa att installationen av Flask och Jinja2 har gått bra kan man starta Python3 i terminalen (se. avsnittet om Python3,~\ref{Python3}), och skriva följande:
+
+\verb|>>> from flask import Flask|\\
+\verb|>>> import jinja2|
+
+Om dessa kommandon inte ger något felmeddelande är Flask och Jinja2 installerat.
+
+\textbf{Notering:} Portfolion är utvecklad med version 0.12.2 av Flask och version 2.4 av Jinja2. Senare \textit{minor} versioner bör fungera utan problem.
+
+
+\end{document}

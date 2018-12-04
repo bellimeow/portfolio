@@ -1,0 +1,97 @@
+<!-- Page used to show info about a single project -->
+{% extends "general_layout.html" %}
+
+
+{% block pagetitle %}Project: {{ project["project_name"]}}{% endblock %}
+
+{% block css_files %}
+<link rel = "stylesheet" type = "text/css" href = "{{ url_for("static", filename = "style/projectpage.css") }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-12-lg ">
+
+      <div class="lg-pic">
+	<img src="{{ url_for("static", filename="images/"+project["big_image"]) }}" alt="Project image">
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+
+      <div class="col-12-lg" id="project-headline">
+	
+	<h1>{{ project["project_name"] }}</h1>
+      </div>
+      
+
+  </div>
+  
+  <div class="row">
+
+
+    <div class="col-12-lg" id="project-description">
+
+      <div id="short-info">
+
+	{% set item_lst = [("Project ID", "project_id"), ( "Course ID", "course_id"), ("Course", "course_name"), ("Academic credits", "academic_credits"), ("Start date", "start_date"), ("End date", "end_date"), ("Group size", "group_size")] %}
+	{% for item in item_lst  %}
+
+	{% if project[item[1]] %}
+
+	<strong>{{ item[0] }}:</strong> {{ project[item[1]] }} <br>
+
+	{% endif %}
+	{% endfor %}
+
+	
+	{% if project["techniques_used"] %}
+	<strong>Techniques:</strong> {{ ", ".join(project["techniques_used"]) }}<br>
+	{% endif %}
+
+	{% if project["external_link"] %}
+
+	<strong><a href="{{ project["external_link"] }}">Project webpage</a></strong>
+	
+	{% endif %}
+	    
+	  
+	  
+	
+	
+
+      </div>
+
+      <p>{{ project["long_description"] }}</p>
+
+
+      
+
+
+      
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12">
+	<div id="small-pic">
+	  <img src="{{ url_for("static", filename="images/"+project["small_image"]) }}" alt="Small picture">
+	</div>
+      </div>
+      
+
+    </div>
+
+  </div>
+  
+    
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+    "name": "Isabella Delgado",
+    "photo": "author.png",
+    "profession": "Innovative programming student, Linköping University",
+    "email": "ceciliaisabelladelgado@gmail.com",
+    "social_media": {
+	"linkedin": "www.linkedin.com/in/isabella-delgado-53354bb7",
+	"instagram": "https://www.instagram.com/kissekattbell/",
+	"gitlab": "https://gitlab.ida.liu.se/isade842"
+    },
+    "about_me": "Jag heter Isabella Delgado, och är student på andra året på programmet Innovativ Programmering på Linköpings Universitet."
+}

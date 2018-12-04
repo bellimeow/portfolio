@@ -1,0 +1,72 @@
+#############  Möte 1 - 11/9 ##############
+
+Närvarande:
+Isabella
+Sabrina
+Pia
+
+Punkter:
+* Förra veckan
+* Nästa vecka
+* Delegera arbete
+* Commit meddelanden
+* Kommentera kod
+* Utbildning
+
+---------------------------------------------------
+Förra veckan
+---------------------------------------------------
+* Vi lämnade in planeringsdokumenten
+* Började på lo-fi prototypen. Isabella har gjort klart designen/navigationen på hemsidan. 
+* Vi har börjat på installationsmanualen.
+* Skapat Git repo, vi har bjudit in examinator, labbassistent.
+* Pia har startat ett dokument för Projektplanen
+* Skapat en ny mapp i project_documents som heter Projektplan.
+* Sabrina gick med våran grupp, JIPPIE!
+
+
+----------------------------------------------------
+Nästa vecka
+----------------------------------------------------
+Installationsdokumentet:	
+* Kvar installations av emacs, GIMP, Git, Python, Latex
+	- GIMP
+	- Git
+	- emacs
+	- Python
+	- Latex
+Ansvariga: Sabrina, Pia
+
+----------------------------------------------------
+LoFi-prototypen:
+* Testning
+* Renritning
+* Dokumentet
+Ansvariga: Isabella
+
+
+----------------------------------------------------
+------------------- Deadline -----------------------
+----------------------------------------------------
+Torsdag: Lofi och installationsdokument
+
+
+----------------------------------------------------
+Schema för veckan
+----------------------------------------------------
+Måndag: Testa lofi.
+Tisdag: 
+	Testa lofi
+	Klara med lofi och installationsdokumentet.
+Onsdag: Arbeta med projektplan
+
+-----------------------------------------------------
+Utbildning
+-----------------------------------------------------
+Läsa Systemspecifikation av portfoliosystemet under fliken "Uppgift" på hemsidan.
+Flask/Jinja
+
+
+
+FIKA ANSVARIG NÄSTA MÅNDAG: SABRINA!
+	
