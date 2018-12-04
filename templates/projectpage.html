@@ -24,13 +24,13 @@
   <div class="row">
 
       <div class="col-12-lg" id="project-headline">
-	
+
 	<h1>{{ project["project_name"] }}</h1>
       </div>
-      
+
 
   </div>
-  
+
   <div class="row">
 
 
@@ -48,7 +48,7 @@
 	{% endif %}
 	{% endfor %}
 
-	
+
 	{% if project["techniques_used"] %}
 	<strong>Techniques:</strong> {{ ", ".join(project["techniques_used"]) }}<br>
 	{% endif %}
@@ -56,23 +56,25 @@
 	{% if project["external_link"] %}
 
 	<strong><a href="{{ project["external_link"] }}">Project webpage</a></strong>
-	
+
 	{% endif %}
-	    
-	  
-	  
-	
-	
+
+
+
+
+
 
       </div>
 
-      <p>{{ project["long_description"] }}</p>
+      <p>{% autoescape false %}
+        {{ project["long_description"] }}
+      {% endautoescape %}</p>
 
 
-      
 
 
-      
+
+
     </div>
 
 
@@ -82,13 +84,13 @@
 	  <img src="{{ url_for("static", filename="images/"+project["small_image"]) }}" alt="Small picture">
 	</div>
       </div>
-      
+
 
     </div>
 
   </div>
-  
-    
+
+
 
 
 </div>

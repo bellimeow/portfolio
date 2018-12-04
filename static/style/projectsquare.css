@@ -16,11 +16,11 @@
     height: 100%;
     width: 100%;
     background-color: rgba(27, 38, 49, 0.9);
-    color: white;
+    color: black;
     position: absolute;
     top: 0;
     text-align: center;
-    transition: 0.3s all;    
+    transition: 0.3s all;
 }
 
 
@@ -28,9 +28,9 @@
     text-transform: uppercase;
     font-size: 40px;
     margin-top: 10%;
-    
+
 }
 
 .hidden-project p {
-    margin-top: 20%;
+    margin-top: 5%;
 }
