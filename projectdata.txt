@@ -1,0 +1,154 @@
+{
+  "start_date": "2016-03-02",
+  "short_description": "Konstruktion av en enklare dator i avseende på processorn.",
+  "course_name": "Datorkonstruktion",
+  "long_description": "Bomberman är ett spel från 1983 som släpptes av Hudson Soft till 8-bits persondatorer i Japan. Det är ett labyrintbaserat arkadspel där man spelar som en robot som lägger ut bomber för att besegra sina fiender. Spelarens mål var att hitta en dörr som ledde till nästa nivå. Dörren var gömd under block som förstördes med spelarens bomber.
+I en multiplayer-anpassning av spelet spelar två eller fler spelare mot varandra. Deras mål är att döda motståndarna med sina bomber och samtidigt försöka undvika att själv bli bombad.
+Spelplanen är ett 2-dimensionellt rutmönster. Varje ruta representerar antingen en karaktär, bomb, explosion, förstörbara eller icke förstörbara block, eller en tom yta.
+I detta projekt ska vi bygga en fungerande CPU och GPU i bland annat vhdl-kod för FPGA-kortet Nexys3 för att kunna spela Bomberman Multiplayer. I rapporten förklaras apparaten som ger en överblick av de komponenter moduler som används. Sedan beskrivs konstruktionen för CPU och GPU med överskådliga blockscheman. Under projektet togs det fram en fungerande konstruktion för spelet."
+  ,"group_size": 3,
+  "academic_credits": "8",
+  "lulz_had": "many",
+  "external_link": "https://github.com/bellimeow/bomberman-multiplayer",
+  "small_image": "",
+  "techniques_used": [
+    "Assembly",
+    "C++",
+    "python",
+    "VHDL",
+    "XML",
+    "Git"
+  ],
+  "project_name": "Bomberman Multiplayer",
+  "course_id": "TSEA83",
+  "end_date": "2016-05-27",
+  "project_id": 1,
+  "big_image": ""
+},
+{
+  "start_date": "2017-08-28",
+  "short_description": "Making a webbased portfolio",
+  "course_name": "Projekt: Egna datormiljön",
+  "long_description": "In a group of three persons, we made a portfolio with web based data. We created a data storage layer consisting of a JSON-file, and then wrote an API as a python module to extract data. We further made a presentation layer that communicated with the API to obtain the data to display on the page.",
+  "group_size": 3,
+  "academic_credits": "6",
+  "lulz_had": "many",
+  "external_link": "https://github.com/bellimeow/portfolio",
+  "small_image": "small.png",
+  "techniques_used": [
+  "python",
+  "Flask",
+  "Jinja2",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "jQuery",
+  "Bootstrap",
+  "git"
+  ],
+  "project_name": "My Portfolio",
+  "course_id": "TDP003",
+  "end_date": "2017-10-17",
+  "project_id": 2,
+  "big_image": "big.png"
+},
+{
+  "start_date": "2018-09-21",
+  "short_description": "En enkel social media app.",
+  "course_name": "Webbprogrammering och interaktivitet",
+  "long_description": ""
+  ,"group_size": 2,
+  "academic_credits": "6",
+  "lulz_had": "many",
+  "external_link": "https://github.com/bellimeow/hedwig-message-board",
+  "small_image": "hedwigmsgboard.png",
+  "techniques_used": [
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Node.js",
+    "MongoDB",
+    "Javascript",
+    "JQuery",
+    "AJAX",
+    "Selenium",
+    "Mocha",
+    "Git"
+  ],
+  "project_name": "Hedwig Message Board",
+  "course_id": "TDP013",
+  "end_date": "2018-11-02",
+  "project_id": 5,
+  "big_image": "hedwigmessageboard.png"
+},
+{
+  "start_date": "2018-02-14",
+  "short_description": "Chameleon är ett språk som kombinerats med inspiration av flertalet språk, så som Lua, COBOL, Papyrus och även C++. Inspirationen har hämtats både syntaktiskt och funktionellt. Många aspekter kring språkets syntax har utvärderats för att säkerställa att parsern tolkar denna på rätt sätt.",
+  "course_name": "Konstruktion av datorspråk",
+  "long_description": "Chameleon är ett domänspecifikt språk som utvecklats i Ruby, med syftet att
+  inrikta sig för programmering av robotar, som exempelvis humanoida robotar,
+  eller enklare industrirobotar. Språket är Event-baserat, det innebär att det
+  inte finns en förbestämd startpunkt i ett program som görs med språket. Språkets
+   målgrupp är nybörjare med kunskap om typ-deklaration då det är designat att
+   vara lättläst och intuitivt.
+
+  Språket är inspirerat av Lua, COBOL, Pascal, Papyrus och även C++. Det kan
+  tyckas vara många inspirationskällor, främst har inspirationen hämtats för
+  syntaxen. Papyrus är som Chameleon event-baserat, detta är spelstudion Bethesdas
+   skriptspråk som används i bland annat Skyrim och Fallout 4.
+
+  De fördelar med språket är utvecklaren kan implementera egna fördefinierade
+  metoder som kan vara användbara för just AI-programmering. Exempel på sådana
+  metoder kan vara searchArea, findClosestUnit osv. Det typer som finns
+  tillgängliga är Boolean, Number och Text, List och Table. Utöver dessa planerar
+  vi att lägga till exempelvis Vector2, Vector3 (för koordinater), Text
+   (motsvarande String), Sound, Number, Unit (annan enhet) samt geometriska typer.
+   En fördel med typ-deklaration är att det är lätt att felsöka sin kod samt att
+  de nya fördefinierade typerna används till stor del på samma sätt som standard
+  typerna.
+
+  Projektet gav en kunskap om principerna kring datorspråk och dess uppbyggnad.
+  Tekniker som användes var bland annat XML, parsing med reguljära uttryck och
+  Ruby.
+"
+  ,"group_size": 2,
+  "academic_credits": "6",
+  "lulz_had": "many",
+  "external_link": "https://github.com/bellimeow/chameleon-programming-language",
+  "small_image": "chameleonlogo.png",
+  "techniques_used": [
+    "Ruby",
+    "XML",
+    "Git"
+  ],
+  "project_name": "Chameleon Programming Language",
+  "course_id": "TDP019",
+  "end_date": "2018-05-14",
+  "project_id": 4,
+  "big_image": "chameleonlogo.png"
+},
+
+-------------
+
+{
+  "start_date": "2018-02-14",
+  "short_description": "",
+  "course_name": "",
+  "long_description": ""
+  ,"group_size": 2,
+  "academic_credits": "",
+  "lulz_had": "many",
+  "external_link": "",
+  "small_image": "",
+  "techniques_used": [
+    "Ruby",
+    "XML",
+    "",
+    "Git"
+  ],
+  "project_name": "Chameleon Programming Language",
+  "course_id": "TDP019",
+  "end_date": "2018-05-14",
+  "project_id": 1,
+  "big_image": ""
+},
