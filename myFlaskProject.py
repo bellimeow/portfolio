@@ -1,4 +1,8 @@
-from flask import Flask, render_template, url_for, request, abort
+from flask import Flask
+from flask import render_template
+from flask import url_for
+from flask import request
+from flask import abort
 import os
 import handledata
 import re
@@ -54,25 +58,19 @@ def project_list():
     # Get selected techniques, search fields, sort by field and sort by order.
     selected_techniques = get_selected_techniques_for_search()
     selected_search_fields = get_selected_fields_for_search()
-    selected_search_fields = None if len(selected_search_fields) == 0
-                                  else selected_search_fields
+    selected_search_fields = None if len(selected_search_fields) == 0 else selected_search_fields
     selected_sortby_field = get_selected_sortby_field_for_search()
     selected_search_order_field = get_selected_sortorder_field_for_search()
 
 
     db = get_data()
 
-    db = handledata.search(db, sort_by=selected_sortby_field,
-         sort_order=selected_search_order_field, techniques=selected_techniques,
-         search=search_string, search_fields=selected_search_fields)
+    db = handledata.search(db, sort_by=selected_sortby_field, sort_order=selected_search_order_field, techniques=selected_techniques, search=search_string, search_fields=selected_search_fields)
 
     db = set_default_values(db)
 
 
-    return render_template("projectlist.html", db = db,
-                           technique_list = technique_list,
-                           search_fields=search_field_list,
-                           sortby_fields = sortby_field_list)
+    return render_template("projectlist.html", db = db, technique_list = technique_list, search_fields=search_field_list, sortby_fields = sortby_field_list)
 
 
 @app.route("/techniques")
@@ -89,17 +87,14 @@ def project_techniques():
     # value into a list.
     args = get_request_args('selected_techniques')
     selected_techniques = args['selected_techniques']
-    selected_techniques_list = selected_techniques.split(',')
-                               if selected_techniques else []
+    selected_techniques_list = selected_techniques.split(',') if selected_techniques else []
 
     # Get the project from the database that used the selected techniques.
     project_list = get_projects_by_selected_techniques(selected_techniques_list)
     project_list = set_default_values(project_list)
 
     # Gather all used techniques from all the project in the database.
-    technique_list = [{'label': technique, 'selected': technique in
-                        selected_techniques_list}
-                      for technique in get_all_techniques()]
+    technique_list = [{'label': technique, 'selected': technique in selected_techniques_list} for technique in get_all_techniques()]
 
     # Design on technique buttons.
     assign_random_wing_pair_to_technique_list(technique_list)
@@ -107,14 +102,11 @@ def project_techniques():
     # Generate form value for each button
     for technique in technique_list:
         if selected_techniques and technique['selected'] == True:
-            technique['form_value'] =
-                form_value_remove_item(selected_techniques, technique['label'])
+            technique['form_value'] = form_value_remove_item(selected_techniques, technique['label'])
         else:
-            technique['form_value'] =
-                form_value_add_item(selected_techniques, technique['label'])
+            technique['form_value'] = form_value_add_item(selected_techniques, technique['label'])
 
-    return render_template("techniques.html", technique_list = technique_list,
-                            project_list = project_list)
+    return render_template("techniques.html", technique_list = technique_list, project_list = project_list)
 
 
 
@@ -159,22 +151,12 @@ def get_all_techniques():
 
 def get_all_search_fields():
     '''Returns all search fields that can be selected on the search page.'''
-    search_fields = [("project_name", "Project name"),
-                    ("start_date", "Start date"), ("end_date", "End date"),
-                    ("group_size", "Group size"),
-                    ("short_description", "Short description"),
-                    ("long_description", "Long description"),
-                    ("academic_credits", "Academic credits"),
-                    ("course_id", "Course ID"), ("course_name", "Course name")]
+    search_fields = [("project_name", "Project name"),("start_date", "Start date"), ("end_date", "End date"), ("group_size", "Group size"), ("short_description", "Short description"), ("long_description", "Long description"), ("academic_credits", "Academic credits"), ("course_id", "Course ID"), ("course_name", "Course name")]
     return search_fields
 
 def get_all_sortby_fields():
     '''Returns all fields that can be sorted by on projectlist page'''
-    sortby_fields = [("start_date", "Start date"),
-                    ("project_name", "Project name"),
-                    ("end_date", "End date"), ("group_size", "Group size"),
-                    ("academic_credits", "Academic credits"),
-                    ("course_id", "Course ID"), ("course_name", "Course name")]
+    sortby_fields = [("start_date", "Start date"),("project_name", "Project name"), ("end_date", "End date"), ("group_size", "Group size"), ("academic_credits", "Academic credits"),("course_id", "Course ID"), ("course_name", "Course name")]
     return sortby_fields
 
 
@@ -243,14 +225,12 @@ def set_default_values(db):
         if not re.search("\w+\.\w{3,4}", project["big_image"]):
             project["big_image"] = "Programming-languages.jpg"
         else:
-            project["big_image"] = "project" + str(project["project_id"]) +
-                                   "/" + project["big_image"]
+            project["big_image"] = "project" + str(project["project_id"]) + "/" + project["big_image"]
 
         if not re.search("\w+\.\w{3,4}", project["small_image"]):
             project["small_image"] = "No_image_available.svg"
         else:
-            project["small_image"] = "project" + str(project["project_id"]) +
-                                     "/" + project["small_image"]
+            project["small_image"] = "project" + str(project["project_id"]) + "/" + project["small_image"]
 
     return db_copy
 
@@ -323,8 +303,7 @@ def assign_random_wing_pair_to_technique_list(technique_list):
     # Transform each element in technique_list.
     for i in range(len(technique_list)):
         # Assign each element a random pair of "wings".
-        wing_pair = techniques_decorative_wing_pairs[
-        index_to_decorative_wings[i] % len(techniques_decorative_wing_pairs)]
+        wing_pair = techniques_decorative_wing_pairs[index_to_decorative_wings[i] % len(techniques_decorative_wing_pairs)]
 
         #decoration_map[technique_list[i]] = wing_pair
         technique_list[i]['left_wing'] = wing_pair[0]

@@ -3,8 +3,8 @@
   "start_date": "2018-09-21",
   "short_description": "En enkel social media app.",
   "course_name": "Webbprogrammering och interaktivitet",
-  "long_description": ""
-  ,"group_size": 2,
+  "long_description": "This is a long description.",
+  "group_size": 2,
   "academic_credits": "6",
   "lulz_had": "many",
   "external_link": "https://github.com/bellimeow/hedwig-message-board",

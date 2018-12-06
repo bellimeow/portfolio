@@ -57,8 +57,7 @@ def get_technique_stats(db):
     for project in db:
         # For each project we insert information about the project's id and
         # name.
-        project_info = {'id': project['project_id'],
-                        'name': project['project_name']}
+        project_info = {'id': project['project_id'],'name': project['project_name']}
 
         techniques_used = project.get('techniques_used', None)
         if techniques_used:
@@ -72,8 +71,7 @@ def get_technique_stats(db):
 
 
 
-def search(db, sort_by = 'start_date', sort_order = 'desc', techniques = None,
-            search = None, search_fields = None):
+def search(db, sort_by = 'start_date', sort_order = 'desc', techniques = None, search = None, search_fields = None):
     '''Returns a list of projects that have a field that contains the specified
     user input and sort by any field, either ascending or descending. Defaults
     to sorting by start date. If search_fields is None, then all the projects
@@ -122,8 +120,7 @@ def search_in_project(project, techniques, search, search_fields):
         # contain the search string, return True.
         for search_field in search_fields:
             project_field = project.get(search_field, None)
-            if search_field != None and
-                recursive_search_object(project_field, search):
+            if search_field != None and recursive_search_object(project_field, search):
                 return True
 
     return False
@@ -165,5 +162,4 @@ def sort_projects(db, sort_by, sort_order):
 
     # If the search field is not present in the project then always sort it
     # last.
-    return sorted(db, key = lambda k: k[sort_by] if sort_by in k else
-                  missing_key, reverse = sort_descending)
+    return sorted(db, key = lambda k: k[sort_by] if sort_by in k else missing_key, reverse = sort_descending)
