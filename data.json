@@ -26,6 +26,7 @@
   "course_id": "TDP013",
   "end_date": "2018-11-02",
   "project_id": 5,
+  "project_image": "projectimage1.png",
   "big_image": "hedwigmessageboard.png"
 },
 {
@@ -47,6 +48,7 @@
   "course_id": "TDP019",
   "end_date": "2018-05-14",
   "project_id": 4,
+  "project_image": "projectimage1.png",
   "big_image": "chameleonlogo.png"
   },
   {
@@ -69,6 +71,7 @@
     "course_id": "TDP005",
     "end_date": "2017-11-21",
     "project_id": 3,
+    "project_image": "projectimage1.png",
     "big_image": "nougdug3.png"
   },
   {
@@ -96,6 +99,7 @@
       "course_id": "TDP003",
       "end_date": "2017-10-17",
       "project_id": 2,
+      "project_image": "projectimage1.png",
       "big_image": "big.png"
    },
    {
@@ -120,6 +124,7 @@
       "course_id": "TSEA83",
       "end_date": "2016-05-27",
       "project_id": 1,
+      "project_image": "projectimage1.png",
       "big_image": "game.jpg"
     }
 ]
