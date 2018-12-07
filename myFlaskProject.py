@@ -232,6 +232,11 @@ def set_default_values(db):
         else:
             project["small_image"] = "project" + str(project["project_id"]) + "/" + project["small_image"]
 
+        if not re.search("\w+\.\w{3,4}", project["project_image"]):
+            project["project_image"] = "No_image_available.svg"
+        else:
+            project["project_image"] = "project" + str(project["project_id"]) + "/" + project["project_image"]
+
     return db_copy
 
 
