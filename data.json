@@ -7,7 +7,7 @@
   "group_size": 2,
   "academic_credits": "6",
   "lulz_had": "many",
-  "external_link": "https://github.com/bellimeow/hedwig-message-board",
+  "external_link": "https://gitlab.ida.liu.se/isade842/TDP013",
   "small_image": "hedwigmsgboard.png",
   "techniques_used": [
     "HTML",
@@ -38,7 +38,7 @@
   "group_size": 2,
   "academic_credits": "6",
   "lulz_had": "many",
-  "external_link": "https://github.com/bellimeow/chameleon-programming-language",
+  "external_link": "https://gitlab.ida.liu.se/sebbj070/tdp019-chameleon-programming-language",
   "small_image": "chameleonlogo.png",
   "techniques_used": [
     "Ruby",
