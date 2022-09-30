@@ -1,2 +1,2 @@
 static/scripts/* linguist-documentation=false
-static/scripts/* linguist-vendored
+*.js linguist-vendored=false
